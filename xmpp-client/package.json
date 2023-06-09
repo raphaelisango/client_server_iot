@@ -1,0 +1,17 @@
+{
+    "name": "xmpp-demo",
+    "version": "1.0.0",
+    "type":"module",
+    "description": "",
+    "main": "xmppClientA.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "execa": "^7.1.1",
+        "simple-xmpp": "^2.3.1"
+    }
+}
