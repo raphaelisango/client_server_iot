@@ -53,8 +53,8 @@ class xmppclass {
   }
 }
 
-function XmppClass(xmpp, port, domain) {
-  return new xmppclass(xmpp, port, domain);
+function XmppClass(xmpp, execa, port, domain) {
+  return new xmppclass(xmpp, execa, port, domain);
 }
 
 export default XmppClass;
