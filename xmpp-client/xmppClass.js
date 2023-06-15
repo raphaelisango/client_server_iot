@@ -27,17 +27,19 @@ class xmppclass {
     this.#XMPP.send(`${user}@${host}`, message);
   }
   On(event, callbackfunc) {
+    console.log("event");
     this.#XMPP.on(event, callbackfunc);
   }
   async User(command, script) {
+ 
+
     switch (command) {
       case "register":
-        return (output = await this
-          .#EXECA`echo "percymiler" | sudo -S register ${script.name} ${script.host} ${script.password}`); //sudo prosodyctl register passy localhost 1234
+        return (await this.#EXECA(`echo`,` percymiler | sudo -S prosodyctl register  ${script.name} ${script.host} ${script.password}`)); //sudo prosodyctl register passy localhost 1234
         break;
       case "password":
         return (output = await this
-          .#EXECA`echo "percymiler" | sudo -S register ${script.name} ${script.host} ${script.password}`); //sudo prosodyctl register passy localhost 1234
+          .#EXECA`echo "percymiler" | sudo -S prosodyctl register ${script.name} ${script.host} ${script.password}`); //sudo prosodyctl register passy localhost 1234
 
         break;
       case "delete":
